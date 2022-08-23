@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap');
+
+:root {
+    --color-terminal: #292b36;
+    --border-round: 9px;
+}
+
+* {
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+}
+
+html, body, div, section, footer {
+    margin: 0;
+	padding: 0;
+	border: 0
+}
+
+body {
+    display: inline-block;
+    height: 100vh;
+    width: 100vw;
+    background-color: blueviolet;
+    color: lightslategray;
+    vertical-align: baseline;
+    line-height: 1;
+}
+
+/*---------------Header----------------*/
+.logo {
+    height:10vh;
+    width: 10vw;
+}
+
+img {
+    margin: 30px 0 0 90px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/*----------------Title-----------------*/
+.title {
+    display: block;
+    font-size: 50px;
+    margin-top: 2px;
+    text-align: center;
+    text-decoration: underline;
+    color: rgb(65, 61, 77);
+}
+
+/*---------------Main----------------*/
+main {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/*---------------Board1----------------*/
+.board1 {
+    display: inline-block;
+}
+
+.encryptor {
+    display: inline-block;
+    height: 60vh;
+    width: 55vw;
+    margin-right: 10px;
+    box-shadow: 7px 7px 35px 4px rgb(42, 40, 49);
+    border-radius: var(--border-round);
+}
+
+#txt_original {
+    height: 95%;
+    width: 95%;
+    resize: none;
+    margin: 5px;
+    background-color: var(--color-terminal);
+    width: -webkit-fill-available;
+    color: white;
+    border-radius: var(--border-round);
+    font-size: 30px;
+}
+
+#txt_original::placeholder {
+    text-align: center;
+    padding-top: 150px;
+    font-size: 35px;
+}
+
+#btn_encrypt, #btn_decrypt {
+    width: 34%;
+    margin: 30px 40px 30px 40px;
+    padding: 15px;
+    border: var(--border-round);
+    background-color: rgba(63, 53, 70, 0.759);
+    color: lightgrey;
+    font-size: 30px;
+    font-weight: bold;
+
+    transition: 500 all;
+}
+
+#btn_encrypt:hover, #btn_decrypt:hover {
+    color: lightgreen;
+    transform: scale(1.2);
+}
+
+#btn_encrypt:active, #btn_decrypt:active {
+    position: relative;
+    box-shadow:0 0 0 rgb(216, 245, 235), inset 0 0 5px rgba(90, 104, 96, 0.4);
+    padding: 10px;
+}
+
+/*---------------Board2----------------*/ 
+.board2 {
+    display: inline-block;
+}
+
+.encrypted {
+    display: inline-block;
+    height: 60vh;
+    width: 35vw;
+    margin-left: 10px;
+    box-shadow: 7px 7px 35px 4px rgb(42, 40, 49);
+    border-radius: var(--border-round);
+}
+
+#txt_encrypted {
+    height: 95%;
+    width: 95%;
+    resize: none;
+    margin: 5px;
+    background-color: var(--color-terminal);
+    color: white;
+    outline: none;
+    width: -webkit-fill-available;
+    border-radius: var(--border-round);
+    font-size: 30px;
+
+    background-image: url("imgs/img_encriptar.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 250px;;   
+}
+
+#copy_txt {
+    width: 55%;
+    margin: 30px 15px 30px 30px;
+    padding: 15px;
+    border: var(--border-round);
+    background-color: rgba(63, 53, 70, 0.759);
+    color: lightgray;
+    font-size: 30px;
+    font-weight: bold;
+
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+#copy_txt:hover {
+    transform: scale(1.1);
+}
+
+#copy_txt:hover {
+    background-color: lightgreen;
+    color: grey;
+}
+
+#copy_txt:active {
+    background-color: lightcyan;
+    box-shadow: 10px 10px lightgrey;
+    color: rgba(36, 39, 36, 0.8);
+    transform: scale(1.1);
+}
+
+#clear_txt {
+    width: 19%;
+    margin: 10px;
+    padding: 9px 5px;
+    font-size: 20px;
+    font-weight: bold;
+    border: var(--border-round);
+    background-color: rgba(63, 53, 70, 0.759);
+    color: lightgray;
+    
+    transition: 1s;
+    cursor: pointer;
+}
+
+#clear_txt:hover {
+    transform: scale(1.1);
+}
+
+#clear_txt:active {
+    background-color: lightcyan;
+
+}
+
+/*-------------Footer-------------*/
+footer {
+    height: 20vh;
+    padding: 50px;
+    background-color: #292b36;
+}
+
+.foot {
+    line-height: 90px;
+    font-size: 45px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+h4 {
+    font-size: 15px;
+    text-align: center;
+}
+
+/*------------Media Queries------------*/
+@media screen and (max-width:480px) {
+
+    /*----------Header----------*/
+    .logo {
+        height:15vh;
+        width: 15vw;
+    }
+    img {
+        margin: 5px 0 0 40px;
+        padding: 2px;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+    }
+
+    /*----------Board1----------*/
+    .encryptor {
+        height: 45vh;
+        width: 75vw;
+    }
+
+    #txt_original {
+        font-size: 20px;
+    }
+
+    #txt_original::placeholder {
+        font-size: 20px;
+        padding-top: 110px;
+        color: lightgrey;
+    }
+
+    #btn_encrypt, #btn_decrypt {
+        width: 70%;
+        margin: 5px;
+        padding: 11px;
+        font-size: 25px;
+    }
+
+    #btn_encrypt {
+        margin-top: 12px;
+    }
+
+    #btn_decrypt {
+        margin-bottom: 20px;
+    }
+
+    #btn_encrypt:active, #btn_decrypt:active {
+        padding: 9px;
+    }
+
+    /*----------Board2----------*/
+    .encrypted {
+        height: 45vh;
+        width: 75vw;
+    }
+
+    #txt_encrypted {
+        font-size: 20px;
+    }
+
+    #copy_txt {
+        width: 60%;
+        margin: 15px;
+        padding: 15px;
+        font-size: 25px;
+    }
+
+    #copy_txt:hover {
+        color: rgba(0, 0, 0, 0.76);
+    }
+
+    #clear_txt {
+        width: 16%;
+        margin: 9px;
+        font-size: 15px;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width:680px) {
+
+    /*----------Board1----------*/
+    .encryptor {
+        height: 55vh;
+        width: 75vw;
+    }
+
+    #txt_original {
+        font-size: 23px;
+    }
+
+    #txt_original::placeholder {
+        font-size: 23px;
+        padding-top: 120px;
+        color: lightgrey;
+    }
+
+    #btn_encrypt, #btn_decrypt {      
+        margin: 9px;
+        padding: 11px;
+        font-size: 27px;
+    }
+
+    #btn_encrypt {
+        width: 60%;
+        margin-top: 20px;
+    }
+
+    #btn_decrypt {
+        width: 60%;
+        margin-bottom: 20px;
+    }
+
+    #btn_encrypt:active, #btn_decrypt:active {
+        padding: 12px;
+    }
+
+    /*----------Board2----------*/
+    .encrypted {
+        height: 55vh;
+        width: 75vw;
+    }
+
+    #txt_encrypted {
+        font-size: 23px;
+    }
+
+    #copy_txt {
+        width: 55%;
+        margin: 20px 15px;
+        padding: 15px;
+        font-size: 27px;
+    }
+
+    #copy_txt:hover {
+        color: rgba(0, 0, 0, 0.76);
+    }
+
+    #clear_txt {
+        width: 20%;
+        margin: 17px;
+        font-size: 17px;
+    }
+}
+
+@media (min-width: 681px) and (max-width:970px) {
+
+    /*----------Board1----------*/
+    .encryptor {
+        height: 55vh;
+        width: 55vw;
+    }
+
+    #txt_original {
+        font-size: 26px;
+    }
+
+    #txt_original::placeholder {
+        font-size: 26px;
+        padding-top: 120px;
+    }
+
+    #btn_encrypt, #btn_decrypt {      
+        margin: 30px 15px;
+        padding: 12px 5px;
+        font-size: 27px;
+    }
+
+    #btn_encrypt {
+        width: 34%;
+    }
+
+    #btn_decrypt {
+        width: 34%;
+    }
+
+    #btn_encrypt:active, #btn_decrypt:active {
+        padding: 15px;
+    }
+
+    /*----------Board2----------*/
+    .encrypted {
+        height: 55vh;
+        width: 40vw;
+    }
+
+    #txt_encrypted {
+        font-size: 26px;
+    }
+
+    #copy_txt {
+        width: 44%;
+        margin: 30px 15px;
+        padding: 12px 5px;
+        font-size: 27px;
+    }
+
+    #clear_txt {
+        width: 20%;
+        padding: 6px 4px;
+        font-size: 17px;
+    }    
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="index.css">
+    <title>Encriptador</title>
+
+</head>
+
+<body>
+    
+    <header>
+        <div class="logo">
+            <img src="imgs/logo_alura.png" alt="Logo de Alura">
+        </div>
+    </header>
+
+    <h1 class="title">Encriptador ONE</h1>
+
+    <main>
+        <section class="board1">
+            <div class="encryptor">
+                <textarea id="txt_original" name="txt_or" spellcheck="false" autocomplete="off" placeholder="Ingrese el texto&#10;No ingrese texto en mayúsculas o con acentos"></textarea>
+            </div>
+            <div class="bttnsTxt_or">
+                <button id="btn_encrypt" onclick="btnEncrypt()">Encriptar</button>
+                <button id="btn_decrypt" onclick="btnDecrypt()" >Desencriptar</button>
+            </div>
+        </section>
+
+        <section class="board2">
+            <div class="encrypted">
+                <textarea id="txt_encrypted" name="txt_en" spellcheck="false" autocomplete="off" readonly></textarea> <!--disabled or readonly (outline: none;)-->
+            </div>
+            <div class="bttnTxt_en">
+                <button id="copy_txt" onclick="btnCopyTxt()">Copiar Texto</button>
+                <button id="clear_txt" onclick="btnClearTxt()">Limpiar</button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <h1 class="foot">ONE Challenge</h1>
+        <h4>&copy Juan-Carlos</h4>
+    </footer>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
